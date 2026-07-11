@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #qoute{
+            font-size: 50px;
+            text-align: center;
+            word-spacing: 2%;
+            border: solid;
+            border-radius: 10px; 
+            background-color: white;
+            padding: 50px;
+            height: 200px;
+        }
+        #btn-qt{
+            width: 250px;
+            height: 150px;
+            font-size: 25px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body{
+            background-color: rgb(66, 161, 66);
+            align-items: center;
+            justify-content: center;
+            align-content: center
+        }
+        h1{
+            font-size: 50px;
+            text-align: center;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>MINI PROJECT #3</h1>
+<hr>
+<p id="qoute">Random Qoute for the day</p>
+
+<button id="btn-qt">CLICK ME TO GENERATE A QOUTE</button>
+
+    <script>
+        const newQoute = document.querySelector("#qoute");
+        const btnQoute = document.querySelector("#btn-qt");
+        const body = document.querySelector("body")
+        const randomQoutes = [
+            ("First, solve the problem. Then, write the code." + "– John Johnson"), 
+            ("Fix the cause, not the symptom."),
+            ("Talk is cheap. Show me the code."), 
+            ("The only way to do great work is to love what you do."), 
+            ("Any sufficiently advanced technology is indistinguishable from magic.")   
+        ];
+
+        const randomColor = ["red","blue", "white", "pink", "orange"];
+
+        btnQoute.addEventListener("click", function(){
+
+            let randomIndex = Math.floor(Math.random()* randomQoutes.length);
+            let randomIndex2 = Math.floor(Math.random()* randomColor.length);
+            newQoute.textContent = randomQoutes[randomIndex];
+            body.style.backgroundColor = randomColor[randomIndex2];
+
+        });
+    </script>
+</body>
+</html>

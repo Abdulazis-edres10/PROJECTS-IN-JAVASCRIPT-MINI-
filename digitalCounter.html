@@ -54,16 +54,14 @@
 
     <script>
         let count = 0;
-        // let num = document.querySelector('#num');
-        // let btn = document.querySelector('#btn')
-        const container = document.querySelector('#btn');
+        
+        const bttn = document.querySelector('#btn');
         const display = document.querySelector('#count');
 
             function updateCount(){
-                // document.getElementById("count").innerHTML = count;
                 display.textContent = count;
             }
-        container.addEventListener("click", function(e){
+        bttn.addEventListener("click", function(e){
             // console.log(btn)
             if (e.target.classList.contains('btn-decrease')){
                 count--;
