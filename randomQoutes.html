@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random quote generator   </title>
 
     <style>
         #qoute{
@@ -27,6 +27,8 @@
         }
         body{
             background-color: rgb(66, 161, 66);
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             align-content: center
@@ -42,15 +44,15 @@
 <body>
     <h1>MINI PROJECT #3</h1>
 <hr>
-<p id="qoute">Random Qoute for the day</p>
+<p id="qoute">Random qoute for the day</p>
 
-<button id="btn-qt">CLICK ME TO GENERATE A QOUTE</button>
+<button id="btn-qt">CLICK ME TO GENERATE A QUOTE</button>
 
     <script>
-        const newQoute = document.querySelector("#qoute");
-        const btnQoute = document.querySelector("#btn-qt");
+        const newQuote = document.querySelector("#qoute");
+        const btnQuote = document.querySelector("#btn-qt");
         const body = document.querySelector("body")
-        const randomQoutes = [
+        const randomQuotes = [
             ("First, solve the problem. Then, write the code." + "– John Johnson"), 
             ("Fix the cause, not the symptom."),
             ("Talk is cheap. Show me the code."), 
@@ -60,11 +62,11 @@
 
         const randomColor = ["red","blue", "white", "pink", "orange"];
 
-        btnQoute.addEventListener("click", function(){
+        btnQuote.addEventListener("click", function(){
 
-            let randomIndex = Math.floor(Math.random()* randomQoutes.length);
+            let randomIndex = Math.floor(Math.random()* randomQuotes.length);
             let randomIndex2 = Math.floor(Math.random()* randomColor.length);
-            newQoute.textContent = randomQoutes[randomIndex];
+            newQuote.textContent = randomQuotes[randomIndex];
             body.style.backgroundColor = randomColor[randomIndex2];
 
         });
