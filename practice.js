@@ -1,6 +1,6 @@
 // for (i = 0; i <= 5; i++){
 //     console.log("GoodMorning")
-    
+
 // }
 // cars = ["volvo", "Jeep", "Avanza"]
 // console.log(cars[2])
@@ -67,7 +67,7 @@
 //     }
 // };
 // greetings.greet();
- 
+
 // let attitude = "bad";
 //     if (attitude == "Good"){
 //         function greet(){
@@ -87,10 +87,10 @@
 //   return "Hello World";
 // }
 // let greeting = sayHello();
-   // function multiply(a,b){
-   //  console.log(a * b);
-   // }
-   // multiply(4, 5);
+// function multiply(a,b){
+//  console.log(a * b);
+// }
+// multiply(4, 5);
 
 // const person = {
 //   firstName: "John",
@@ -100,7 +100,7 @@
 //     console.log(this.firstName + " " + this.lastName);
 //   }
 // };
-  
+
 //MP_01
 
 // let studentA = 78;
@@ -226,7 +226,6 @@ let finalTotal = 0;
 //     oddNumber++
 //   }
 
-
 //   if (num > largestNumber){
 //     largestNumber = num;
 //   }
@@ -244,7 +243,6 @@ let finalTotal = 0;
 // console.log(`Smallest Number: ${smallestNumber}`);
 // console.log(`Sum: ${totalNumber}`);
 
-
 // mini challenge
 
 /*
@@ -257,7 +255,7 @@ Create a variable called total that starts at 0.
 Use a loop to add each price from your array to the total.
 
 Use a conditional statement to check: if the total is over $100, give them a $10 discount!
-*/ 
+*/
 
 /*let prices = [120, 45, 80]; // Array of 3 prices
 let total = 0;
@@ -276,7 +274,6 @@ for ( let i = 0; i < prices.length; i++){
 
 console.log ('total:' + total); */
 
-
 // this is the correct code according to Gemini
 /*let prices = [120, 45, 80];
 let total = 0;
@@ -289,9 +286,6 @@ if (total > 100){
   total -= 10;
 }
 console.log(`Total: $${total}`);*/
-
-
-
 
 /*
 let inventory = [
@@ -336,7 +330,22 @@ for (let i = 0; i < numbers.length; i++){
 //   console.log(randomNumber);
 // }
 
- let randomNumber = Math.floor(Math.random() * 100);
- console.log(randomNumber);
+//  let randomNumber = Math.floor(Math.random() * 100);
+//  console.log(randomNumber);
 
-  
+// PROFILE ACTIVITY
+/*
+const userprofile = {
+  name: "Abdulazis",
+  age: 23,
+  isActive: true,
+  language: ["javascript", "Python"],
+  metrics: {
+    project_completed: 6,
+    currentEnergyLevel: "High"
+  }
+};
+
+console.log("Name: ", userprofile.name);
+console.log("Energy Level: ", userprofile.metrics.currentEnergyLevel)
+*/
