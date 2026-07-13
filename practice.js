@@ -331,3 +331,12 @@ for (let i = 0; i < numbers.length; i++){
 }
   console.log(sum);
 */
+// for (let i = 0; i < 5; i++){
+//   let randomNumber = Math.floor(Math.random() * 5);
+//   console.log(randomNumber);
+// }
+
+ let randomNumber = Math.floor(Math.random() * 100);
+ console.log(randomNumber);
+
+  

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEED BACK BUTTON</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: chocolate;
+        }
+
+        #p-card {
+            width: 200px;
+            height: 150px;
+            padding: 30px;
+            background-color: rgb(235, 235, 235);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid;
+            border-radius: 5px;
+        }
+
+        P {
+            font-size: 50px;
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            margin-top: 5px;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #Unliked-btn {
+            background-color: gray;
+            color: white;
+        }
+
+        /* Appended state managed by JavaScript */
+        #Unliked-btn.Liked {
+            background-color: pink;
+            /* Turns pink automatically when JavaScript adds the class */
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        MINI PROJECT #4
+    </p>
+
+    <div id="card">
+        <div id="p-card">
+            You haven't liked this yet
+        </div>
+
+        <button id="Unliked-btn" class="Liked-btn">Like</button>
+    </div>
+
+    <script>
+
+
+        const btn = document.querySelector("#Unliked-btn");
+        const textStatus = document.querySelector("#p-card");
+
+        btn.addEventListener("click", function () {
+
+            if (btn.classList.contains('Liked')) {
+                btn.classList.remove('Liked');
+                btn.textContent = "Liked";
+                textStatus.textContent = "You haven't liked this yet";
+            } else {
+                btn.classList.add("Liked");
+                btn.textContent = "Unliked";
+                textStatus.textContent = "You liked this item!";
+
+            }
+        })
+
+        /* const statusText = document.querySelector("#p-card");
+         const btn = document.querySelector("#UnLiked-btn");
+ 
+         btn.addEventListener("click",function(){
+ 
+             /*statusText.textContent = "You liked this item!";
+             btn.style.backgroundColor = "pink";
+             btn.textContent = "Unliked";
+ 
+             statusText = textContent = "You haven't liked this yet."
+             btn2.style.backgroundColor = "gray";
+             btn2.textContent = "Liked";*/
+
+        /* if (btn.classList.contains('Liked')){
+             btn.classList.remove('Liked');
+             btn.textContent = 'UnLiked';
+         }else{
+             btn.classList.add("#Unliked-btn");
+             btn.textContent = "Liked";
+         }
+     })
+     
+     */
+
+    </script>
+
+</body>
+
+</html>
