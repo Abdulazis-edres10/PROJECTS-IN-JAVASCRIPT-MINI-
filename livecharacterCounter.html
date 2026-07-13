@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIVE CHARACTER COUNTER</title>
+    <style>
+      #project-number {
+        font-size: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="project-number">MINI PROJECT #6</p>
+    <hr />
+
+    <div id="container">
+      <h2>Create Post</h2>
+      <textarea id="tweet-box" placeholder="What's Happening?"></textarea>
+      <p id="counter">0 / 20</p>
+    </div>
+    <script>
+      let counter = 0;
+      const myTweetBox = document.querySelector("#tweet-box");
+      const myCounter = document.querySelector("#counter");
+      
+
+      myTweetBox.addEventListener("input", function () {
+        let textLength = myTweetBox.value.length;
+        myCounter.textContent = textLength + "/ 20";
+        if (textLength > 20) {
+          myTweetBox.style.color = "red";
+        } else {
+          myTweetBox.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>
