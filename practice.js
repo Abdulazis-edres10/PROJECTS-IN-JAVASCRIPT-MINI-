@@ -349,3 +349,98 @@ const userprofile = {
 console.log("Name: ", userprofile.name);
 console.log("Energy Level: ", userprofile.metrics.currentEnergyLevel)
 */
+
+//OJT HIRING
+/*const applicants = [
+  { name: "Abdulazis", readyForOJT: true, completedProjects: 6 },
+  { name: "John", readyForOJT: false, completedProjects: 2 },
+  { name: "Maria", readyForOJT: true, completedProjects: 1 },
+  { name: "Mark", readyForOJT: true, completedProjects: 5 },
+  { name: "Sarah", readyForOJT: false, completedProjects: 8 }
+];
+
+for (let i = 0; i < applicants.length; i++){
+  if (applicants[i].readyForOJT == true && applicants[i].completedProjects >= 4){
+    console.log(applicants[i].name, " is qualified for an interview!");
+  }else {
+   console.log( applicants[i].name, " better luck next time!")
+  }
+
+    // console.log(applicants[i].name);
+}*/
+
+//Challenge: The E-Commerce Sales Report
+/*
+const sales = [
+  { item: "Mechanical Keyboard", price: 85, category: "Electronics" },
+  { item: "USB-C Cable", price: 12, category: "Electronics" },
+  { item: "Coffee Mug", price: 15, category: "Kitchen" },
+  { item: "Ergonomic Chair", price: 220, category: "Furniture" },
+  { item: "Notebook", price: 8, category: "Stationery" },
+  { item: "Wireless Mouse", price: 45, category: "Electronics" }
+];
+
+let totalRevenue = 0;
+let vipSalesCount = 0;
+
+sales.forEach((sale)=>{
+  totalRevenue+=sale.price;
+  if (sale.price >= 50){
+    vipSalesCount++;
+  }else{
+
+  }
+  
+})
+  console.log(totalRevenue);
+  console.log(vipSalesCount);
+  */
+
+  //The Ultimate Challenge: The Inventory Audit
+/*
+  const products = [
+  { name: "Laptop", price: 1200, category: "Electronics", inStock: true },
+  { name: "Desk Lamp", price: 35, category: "Home", inStock: true },
+  { name: "Smart Watch", price: 250, category: "Electronics", inStock: false },
+  { name: "Headphones", price: 150, category: "Electronics", inStock: true },
+  { name: "Office Chair", price: 180, category: "Furniture", inStock: true },
+  { name: "Wireless Router", price: 80, category: "Electronics", inStock: true }
+];
+
+let totalValue = 0;
+let electronics = [];
+products.forEach((item)=>{
+  if (item.category == "Electronics" && item.inStock){
+  totalValue+=item.price
+  electronics.push(item.name)
+    
+  }
+})
+console.log(totalValue)
+console.log(electronics)
+*/
+// 1. The 'async' keyword tells JavaScript this function handles slow internet tasks
+async function fetchUsers() {
+  try {
+    // 2. Fetch requests the data from the internet server
+    // The 'await' keyword tells JS: "Pause inside this function until the network responds"
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    
+    // 3. We convert the raw network response into a clean JavaScript Array of Objects
+    const users = await response.json();
+    
+    // 4. YOUR TASK GOES HERE
+    // console.log(users); // Look at the raw data in your console first!
+
+    users.forEach(user => {
+      console.log(user.name)
+      console.log(user.email)
+    });
+
+  } catch (error) {
+    console.log("Something went wrong:", error);
+  }
+}
+
+// Execute the function
+fetchUsers();

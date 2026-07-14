@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Storefront</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #container {
+        display: flex;
+        gap: 15px;
+      }
+      .card {
+        border: 2px solid #333;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Available Electronics</h1>
+    <hr />
+
+    <div id="container"></div>
+
+    <script>
+            const products = [
+              { name: "Laptop", price: 1200, category: "Electronics", inStock: true },
+              { name: "Desk Lamp", price: 35, category: "Home", inStock: true },
+              { name: "Smart Watch", price: 250, category: "Electronics", inStock: false },
+              { name: "Headphones", price: 150, category: "Electronics", inStock: true },
+              { name: "Office Chair", price: 180, category: "Furniture", inStock: true },
+              { name: "Wireless Router", price: 80, category: "Electronics", inStock: true }
+            ];
+
+            const container = document.querySelector("#container");
+
+            products.forEach((item) =>{
+      if (item.category == "Electronics"  && item.inStock){
+        container.innerHTML += `
+      <div class = "card">
+      <h3> ${item.name} </h3>
+      <p> $${item.price}</p>
+      </div>
+      `;
+      }
+           })
+    </script>
+  </body>
+</html>
