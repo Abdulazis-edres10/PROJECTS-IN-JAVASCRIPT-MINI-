@@ -419,18 +419,13 @@ products.forEach((item)=>{
 console.log(totalValue)
 console.log(electronics)
 */
-// 1. The 'async' keyword tells JavaScript this function handles slow internet tasks
 async function fetchUsers() {
   try {
     // 2. Fetch requests the data from the internet server
-    // The 'await' keyword tells JS: "Pause inside this function until the network responds"
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     
-    // 3. We convert the raw network response into a clean JavaScript Array of Objects
     const users = await response.json();
     
-    // 4. YOUR TASK GOES HERE
-    // console.log(users); // Look at the raw data in your console first!
 
     users.forEach(user => {
       console.log(user.name)
@@ -442,5 +437,4 @@ async function fetchUsers() {
   }
 }
 
-// Execute the function
 fetchUsers();
